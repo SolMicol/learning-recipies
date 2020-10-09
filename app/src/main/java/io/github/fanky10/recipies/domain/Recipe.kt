@@ -6,6 +6,7 @@ data class Recipe (
     val steps: List<Step>,
     val mealType: String,
     val time: String,
-    val portion: String
+    val portion: String,
+    val imageRes: Int
 
 )

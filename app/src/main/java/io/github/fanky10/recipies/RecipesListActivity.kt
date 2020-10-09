@@ -3,12 +3,14 @@ package io.github.fanky10.recipies
 import android.app.ListActivity
 import android.content.Context
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import io.github.fanky10.recipies.domain.Recipe
 
@@ -39,6 +41,7 @@ class RecipesListActivity : ListActivity() {
             newView.findViewById<TextView>(R.id.listCookTime).text = recipe?.time
             newView.findViewById<TextView>(R.id.listMealType).text = recipe?.mealType
             newView.findViewById<TextView>(R.id.listPortions).text = recipe?.portion
+            newView.findViewById<ImageView>(R.id.imageView).setImageResource(recipe!!.imageRes)
             val button = newView.findViewById<Button>(R.id.btn_recipe)
             button.setOnClickListener {
                 openRecipeDetail(position)
