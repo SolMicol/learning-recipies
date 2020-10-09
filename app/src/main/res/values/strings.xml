@@ -11,4 +11,5 @@
     <string name="btnChop">Chops</string>
     <string name="btnChoco">Choco</string>
     <string name="btnTBD">TBD</string>
+    <string name="listMealType">Meal Type</string>
 </resources>

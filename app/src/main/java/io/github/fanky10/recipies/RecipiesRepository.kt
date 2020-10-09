@@ -29,7 +29,8 @@ object RecipiesRepository {
                     Step(
                             3, "Añadir las chuletas encima de las papas y llevar al horno a fuego medio. A media cocción (aprox unos 15 min) sacar y dar vuelta a las chuletas y dejar 15 min más"
                     )
-            )
+            ),
+                    "Cena y almuerzo", "1 hora", "5 porciones."
     ),
             Recipe(
             "Choco caliente",
@@ -51,7 +52,7 @@ object RecipiesRepository {
                     Step(
                             4, "Colocar azúcar si se desea."
                             )
-            )
+            ), "Desayuno y merienda", "1 minuto", "1 porción"
     ),
             Recipe(
                     "Tamagoyaki",
@@ -74,7 +75,7 @@ object RecipiesRepository {
                     Step(
                             4, "Colocar aceite en un sartén y cocinar la mezcla."
                     )
-            )
+            ), "Almuerzo y cena", "30 minutos", "4 porciones."
     )
     )
 
@@ -87,7 +88,7 @@ object RecipiesRepository {
     fun saveAll(name: String, ing: Ingredient, step: Step) {
         recipes[n] = Recipe(name,
                 recipes[n].ingredients,
-                recipes[n].steps
+                recipes[n].steps, recipes[n].mealType, recipes[n].time, recipes[n].portion
         )
         recipes[n].ingredients.toMutableList()[0] = ing
         recipes[n].steps.toMutableList()[0] = step
